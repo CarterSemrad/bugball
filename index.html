@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGBALL</title>
+    <link rel="icon" type="image/x-icon" href="assets/p1a14.png">
+    <style>
+        @font-face {
+            font-family: pixels;
+            src: url(pixels.ttf);
+        }
+        body{
+            margin: 0px;
+            height: 100%; 
+            overflow: hidden;
+            background: radial-gradient(#333, #111);
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            background-color: rgb(0, 0, 0);
+            /*background-color: rgb(248, 152, 255);*/
+        }
+        #cover{
+              backdrop-filter: blur(5px);
+              width: 100%;
+              height:100%;
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              z-index: 9;
+        }
+
+        canvas{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 1;
+            /*background-color: rgb(78, 57, 0);*/
+            /*image-rendering: pixelated;*/
+        }
+        #fg{
+            filter: drop-shadow(5px 5px 10px rgb(0, 0, 0)) drop-shadow(5px 5px 10px rgb(0, 0, 0)) saturate(175%);
+            /*filter: hue-rotate(180deg)*/
+        }
+        #score{
+            font-family: pixels;
+            font-size: 7vh;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            z-index: 9999;
+            top: 5%;
+            left: 25%;
+            width: 50%;
+            text-align: center;
+            filter: drop-shadow(5px 5px 10px black) drop-shadow(5px 5px 10px rgb(0, 0, 0));
+        }
+        #bg{
+            z-index: 0;
+            width: 120%;
+            height: 120%;
+            /*filter: saturate(100%) brightness(15%) sepia(1) hue-rotate(180deg) blur(0px);*/
+            filter: brightness(40%) saturate(150%) ;
+            display: block;
+            background-color: rgb(0, 0, 0);
+            
+            /*transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);*/
+        }
+        #playbutton{
+            position: absolute;
+            z-index: 999999;
+            font-size: 25vh;
+            font-family: pixels;
+            color: white;
+            mix-blend-mode: hard-light;
+            filter: drop-shadow(5px 5px 10px black);
+            top: 40%;
+            left: 2%;
+        }
+        #playbutton:hover{
+            position: absolute;
+            z-index: 999999;
+            font-size: 25vh;
+            font-family: pixels;
+            color: white;
+            mix-blend-mode: hard-light;
+            top: 40%;
+            color: rgb(46, 0, 230);
+        }
+        #title{
+            position: absolute;
+            z-index: 999999;
+            font-size: 35vh;
+            font-family: pixels;
+            color: rgb(65, 249, 255);
+            filter: drop-shadow(5px 5px 10px black);
+            mix-blend-mode: difference;
+            left: 2%;
+        }
+    
+    </style>
+</head>
+<body>
+   <div id="cover"></div>
+   <div id="title">BUGBALL</div>
+   <a href="game.html"><div id="playbutton">Play</div></a>
+</body>
+<script src="main2.js"></script>
+</html>
