@@ -1,8 +1,14 @@
+let usedImgs = [8,22,14,12,7,20,10,19,16,15,13,21,18,17,11];
+
 function loadImgs(){
     for(let i = 0; i < 23; i++){
-        let img = document.createElement("img");
-        img.src = `assets/p1a${i + 1}.png`;
-        sprites.push(img);
+        if(usedImgs.indexOf(i) != -1){
+            let img = document.createElement("img");
+            img.src = `assets/p1a${i + 1}.png`;
+            sprites.push(img);
+        } else {
+            sprites.push("hi!");
+        }
     }
 }
 
